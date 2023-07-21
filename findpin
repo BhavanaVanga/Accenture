@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+int oddsum=0,evensum=0;
+void helper(int a){
+    while(a!=0){
+        if((a%10)%2==0){
+            evensum+=a%10;
+        }
+        else{
+            oddsum+=a%10;
+        }
+        a/=10;
+    }
+    
+}
+
+int findsum(int a,int b,int c,int d){
+    helper(a);
+    helper(b);
+    helper(c);
+    if(d%2==0){
+        return evensum;
+    }
+    else
+    {
+        return oddsum;
+    }
+    
+}
+
+int main(){
+    int a,b,c,d;
+    cin>>a>>b>>c>>d;
+    cout<<findsum(a,b,c,d)<<"\n";
+    
+}
