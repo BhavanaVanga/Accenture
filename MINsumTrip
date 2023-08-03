@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	int n,m,a,b,tc_st=0,tc_ot=0,c=0,c_m=0,s_c=0;
+	cin>>n>>m>>a>>b;
+    tc_ot=n*a;
+	if(n%m==0)
+    	tc_st=((n/m)*b);
+	else{
+	  	c=((n/m)*b)+(n%m)*a;
+	    s_c=((n/m)*b)+b;
+	    c_m=c<s_c?c:s_c;
+	}
+	
+if(n%m==0)
+   cout<<min(tc_ot,tc_st)<<"\n";
+else
+   cout<<min(tc_ot,c_m)<<"\n";
+	}
+	return 0;
+}
