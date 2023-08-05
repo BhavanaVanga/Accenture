@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int a,b,sum1=0,sum2=0;
+    cin>>a>>b;
+    for(int i=1;i<=b;i++)
+    {
+        if(i%6==0)
+         sum1+=i;
+        else
+         sum2+=i;
+    }
+    int dif=abs(sum1-sum2);
+    cout<<dif;
+    return 0;
+}
