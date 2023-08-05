@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{   
+    int n;
+    vector<int>v;
+    while(cin>>n)
+    {
+        v.push_back(n);
+    }
+    sort(v.begin(),v.end(),greater<int>());
+    string s="";
+    for(int i=0;i<v.size();i++)
+    {
+        string k=to_string(v[i]);
+        s+=k;
+    }
+    cout<<s;
+    return 0;
+}
