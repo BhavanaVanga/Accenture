@@ -1,0 +1,8 @@
+list1=list(map(int,input().split()))
+n=len(list1)
+res=0
+for i in range(n):
+    temp=max(list1)
+    res=res*10+temp
+    list1.remove(temp);
+print(res)
